@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './components/login/signup/signup.component';
+import { RestaurentDashComponent } from './components/login/restaurent-dash/restaurent-dash.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { SignupComponent } from './components/login/signup/signup.component';
     AppComponent,
     LoginComponent,
     SignupComponent,
+    RestaurentDashComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/login/signup/signup.component';
+import { RestaurentDashComponent } from './components/login/restaurent-dash/restaurent-dash.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   {
     path: 'signup', component: SignupComponent 
   }, 
+  {
+    path:'restaurent' , component: RestaurentDashComponent
+  }
 ];
 
 @NgModule({
