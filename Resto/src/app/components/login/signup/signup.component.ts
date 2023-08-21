@@ -6,30 +6,39 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  signupForm!: FormGroup
-  constructor(private formbuilder: FormBuilder, private _http:HttpClient, private _router:Router) { }
+  signupForm!: FormGroup;
+  constructor(
+    private formbuilder: FormBuilder,
+    private _http: HttpClient,
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
     this.signupForm = this.formbuilder.group({
-      name:[''],
-      email:[''],
-      mobile:[''],
-      password: ['']
-    })
+      name: [''],
+      email: [''],
+      mobile: [''],
+      password: [''],
+    });
   }
 
-  signUp(){
-    this._http.post<any>('http://localhost:3000/signup',this.signupForm.value).subscribe(res=>{
-      console.log(res)
-      alert('Signup Successfully');
-      this.signupForm.reset();
-      this._router.navigate(['/login']);
-    }), (err: any)=>{
-      console.log(err);
-      alert('Signup Error');
-    }
+  signUp() {
+    this._http
+      .post<any>('http://localhost:3000/signup', this.signupForm.value)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          alert('Signup Successfully');
+          this.signupForm.reset();
+          this._router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.log(err);
+          alert('Signup Error');
+        },
+      });
   }
 }
