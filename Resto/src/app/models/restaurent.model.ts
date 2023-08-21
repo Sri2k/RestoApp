@@ -1,4 +1,4 @@
-export class RestaurentData {
+export class RestaurentModel {
     id: number = 0;
     name: string = '';
     address: string = '';
