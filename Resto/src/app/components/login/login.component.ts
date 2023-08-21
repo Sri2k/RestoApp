@@ -27,7 +27,6 @@ export class LoginComponent {
         });
          if (user) {
           alert(user.name + ' logged in successfully');
-          
           this.loginForm.reset();
          } else {
           alert("Invalid credentials");
