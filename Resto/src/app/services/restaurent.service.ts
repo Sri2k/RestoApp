@@ -28,6 +28,12 @@ export class RestaurentService {
       return res;
     }));
   }
+  //GET request
+  getRestaurantById(id:number) {
+    return this._http.get<any>("http://localhost:3000/posts/"+id).pipe(map((res:any)=>{
+      return res;
+    }));
+  }
   //delete request
   deleteRestaurant(id:number) {
     return this._http.delete<any>("http://localhost:3000/posts/"+id).pipe(map((res:any)=>{

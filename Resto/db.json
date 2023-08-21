@@ -2,33 +2,33 @@
   "posts": [
     {
       "id": 1,
-      "name": "arayan hotel 1",
-      "address": "GOBINDAPUR , KAILASHAHAR , UNAKOTI TRIPURA",
-      "email": "sdfaf@gmail.com",
-      "services": "chai , samosa",
-      "mobile": 7845581125
+      "name": "Alpha",
+      "address": "Gajuwaka , Visakhapatnam , Andhra Pradesh",
+      "email": "alpha@bomato.com",
+      "services": "chicken Biriyani",
+      "mobile": 1122334455
     },
     {
       "id": 2,
-      "name": "selection",
-      "address": "GOBINDAPUR , KAILASHAHAR , UNAKOTI TRIPURA",
-      "email": "selection@abc.com",
+      "name": "Mandi Croods",
+      "address": "Gajuwaka , Visakhapatnam , Andhra Pradesh",
+      "email": "mandi@bomato.com",
       "services": "chai",
-      "mobile": 78941252511
+      "mobile": 5544332211
     }
   ],
   "signup": [
     {
-      "name": "arayan hotel 1",
-      "email": "sibashish@abc.com",
-      "mobile": 8769145511,
+      "name": "admin1",
+      "email": "admin1@bomato.com",
+      "mobile": 6677889910,
       "password": "password@123",
       "id": 1
     },
     {
-      "name": "Selection",
-      "email": "selection@abc.com",
-      "mobile": 3164631649,
+      "name": "admin2",
+      "email": "admin2@bomato.com",
+      "mobile": 1099887766,
       "password": "passowrd@123",
       "id": 2
     }
