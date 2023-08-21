@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-signup',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
+  apiUrl:string = environment.apiUrl;
   signupForm!: FormGroup;
   constructor(
     private formbuilder: FormBuilder,
@@ -27,7 +29,7 @@ export class SignupComponent {
 
   signUp() {
     this._http
-      .post<any>('http://localhost:3000/signup', this.signupForm.value)
+      .post<any>(this.apiUrl+'signup', this.signupForm.value)
       .subscribe({
         next: (res) => {
           console.log(res);

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+  apiUrl:string = environment.apiUrl;
   loginForm!: FormGroup;
   constructor(
     private formbuilder: FormBuilder,
@@ -24,7 +26,7 @@ export class LoginComponent {
   }
 
   logIn() {
-    this._http.get<any>('http://localhost:3000/signup').subscribe({
+    this._http.get<any>(this.apiUrl+'signup').subscribe({
       next: (res) => {
         const user = res.find((a: any) => {
           return (
