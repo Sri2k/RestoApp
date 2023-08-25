@@ -26,7 +26,7 @@ export class LoginComponent {
   }
 
   logIn() {
-    this._http.get<any>(this.apiUrl+'signup').subscribe({
+    this._http.get<any>(this.apiUrl+'restosignup').subscribe({
       next: (res) => {
         const user = res.find((a: any) => {
           return (
