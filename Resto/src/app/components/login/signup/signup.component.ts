@@ -29,7 +29,7 @@ export class SignupComponent {
 
   signUp() {
     this._http
-      .post<any>(this.apiUrl+'signup', this.signupForm.value)
+      .post<any>(this.apiUrl+'restosignup', this.signupForm.value)
       .subscribe({
         next: (res) => {
           console.log(res);
